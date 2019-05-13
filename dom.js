@@ -1,4 +1,4 @@
-// EXAMINE LOBJET DOCUMENT //
+/* // EXAMINE LOBJET DOCUMENT //
 
 //console.dir(document);
 
@@ -57,7 +57,7 @@ for(let i = 0 ; i < li.length ; i++){
  */
 
 // QUERYSELECTOR //
-
+/*
 // Permet de choisir tout ce que l'on veut (class, id, css..)
 var header = document.querySelector("#main-header");
 header.style.borderBottom = "solid 4pxx yellow";
@@ -83,7 +83,7 @@ secondItem.style.color = "pink";
 // QUERYSELECTORALL //
 /* var titles = document.querySelectorAll(".title");
 console.log(titles); */
-
+/*
 var odd = document.querySelectorAll("li:nth-child(odd)");
 var even = document.querySelectorAll("li:nth-child(even)");
 for (let i = 0; i < odd.length; i++) {
@@ -160,3 +160,81 @@ var h1 = document.querySelector("header h1");
 container.insertBefore(newDiv, h1);
 newDiv.style.fontSize = "40px";
 console.log(newDiv);
+*/
+
+/* var button = document
+  .getElementById("button")
+  .addEventListener("click", buttonClick);
+
+function buttonClick(e) {
+  //console.log("Button clicked")
+  /* document.getElementById("header-title").textContent='Coucou';
+  document.querySelector("#main").style.backgroundColor='grey'; */
+//console.log(e);
+/* 
+  console.log(e.target);
+  console.log(e.target.id);
+  console.log(e.target.className);
+  console.log(e.target.classList);
+  var output = document.getElementById("output");
+  output.innerHTML = "<h3>Salut</h3>";
+
+  console.log(e.type);
+  // Avoir la position de la souris dans le navigateur
+  console.log(e.clientX);
+  console.log(e.clientY);
+
+  // Si on veut depuis l'endroit du click par exemple
+  console.log(e.offsetX);
+  console.log(e.offsetY);
+
+  // Si on press une touche renvoie un bool 
+  console.log(e.altKey);
+  console.log(e.ctrlKey);
+  console.log(e.shiftKey); */
+
+var button = document.getElementById("button");
+var box = document.getElementById("box");
+//button.addEventListener('click', runEvent);
+//button.addEventListener('dblclick', runEvent);
+//button.addEventListener('mousedown', runEvent);
+//button.addEventListener('mouseup',runEvent);
+
+/* box.addEventListener("mouseenter", runEvent);
+box.addEventListener("mouseleave", runEvent);
+box.addEventListener("mouseover", runEvent);
+box.addEventListener("mouseout", runEvent); */
+
+//box.addEventListener('mousemove',runEvent);
+
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+var select = document.querySelector('select');
+
+
+/* itemInput = addEventListener('keydown',runEvent);
+itemInput = addEventListener('keyup',runEvent); */
+//itemInput = addEventListener('keypress',runEvent);
+//itemInput = addEventListener('focus',runEvent);
+//itemInput = addEventListener('blur',runEvent);
+//itemInput = addEventListener('cut',runEvent);
+//itemInput = addEventListener('paste',runEvent);
+//itemInput = addEventListener('input',runEvent);
+
+//select.addEventListener('change', runEvent);
+//select.addEventListener('input', runEvent);
+
+form.addEventListener("submit",runEvent);
+
+function runEvent(evt) {
+  evt.preventDefault();
+  console.log("EVENT TYPE: " + evt.type);
+  // console.log(evt.target.value);
+  //document.body.style.display = 'none';
+  
+  //document.getElementById('output').innerHTML = '<h3>'+evt.target.value+'</h3>'; 
+
+  //output.innerHTML = '<h3>MouseX: '+evt.offsetX+'</h3><h3>MouseY: '+evt.offsetY+'</h3>'
+
+  //document.body.style.backgroundColor = "rgb("+evt.offsetX+","+evt.offsetY+",40)";
+}
